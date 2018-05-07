@@ -821,10 +821,10 @@ func (v *Viper) BindPFlags(flags *pflag.FlagSet) error {
 }
 
 // BindPFlag binds a specific key to a pflag (as used by cobra).
-// Example (where serverCmd is a Cobra instance):
+// Example (where serverGuidance is a Cobra instance):
 //
-//	 serverCmd.Flags().Int("port", 1138, "Port to run Application server on")
-//	 Viper.BindPFlag("port", serverCmd.Flags().Lookup("port"))
+//	 serverGuidance.Flags().Int("port", 1138, "Port to run Application server on")
+//	 Viper.BindPFlag("port", serverGuidance.Flags().Lookup("port"))
 //
 func BindPFlag(key string, flag *pflag.Flag) error { return v.BindPFlag(key, flag) }
 func (v *Viper) BindPFlag(key string, flag *pflag.Flag) error {
@@ -844,10 +844,10 @@ func (v *Viper) BindFlagValues(flags FlagValueSet) (err error) {
 }
 
 // BindFlagValue binds a specific key to a FlagValue.
-// Example (where serverCmd is a Cobra instance):
+// Example (where serverGuidance is a Cobra instance):
 //
-//	 serverCmd.Flags().Int("port", 1138, "Port to run Application server on")
-//	 Viper.BindFlagValue("port", serverCmd.Flags().Lookup("port"))
+//	 serverGuidance.Flags().Int("port", 1138, "Port to run Application server on")
+//	 Viper.BindFlagValue("port", serverGuidance.Flags().Lookup("port"))
 //
 func BindFlagValue(key string, flag FlagValue) error { return v.BindFlagValue(key, flag) }
 func (v *Viper) BindFlagValue(key string, flag FlagValue) error {

@@ -242,8 +242,8 @@ For individual flags, the `BindPFlag()` method provides this functionality.
 Example:
 
 ```go
-serverCmd.Flags().Int("port", 1138, "Port to run Application server on")
-viper.BindPFlag("port", serverCmd.Flags().Lookup("port"))
+serverGuidance.Flags().Int("port", 1138, "Port to run Application server on")
+viper.BindPFlag("port", serverGuidance.Flags().Lookup("port"))
 ```
 
 You can also bind an existing set of pflags (pflag.FlagSet):
